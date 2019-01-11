@@ -32,11 +32,6 @@ exports.onCreateWebpackConfig = ({
     module: {
       rules: [
         {
-          test: /\.js$/,
-          include: path.dirname(require.resolve('gatsby-theme-drupal')),
-          use: [loaders.js()]
-        },
-        {
           test: /\.(s(a|c)ss|css)$/,
           loaders: [
             {
@@ -51,6 +46,11 @@ exports.onCreateWebpackConfig = ({
           test: /\.(woff|woff2|eot|ttf|svg)$/,
           include: configPostCss,
           use: 'url-loader'
+        },
+        {
+          test: /\.js$/,
+          include: path.dirname(require.resolve('gatsby-theme-drupal')),
+          use: [loaders.js()],
         }
       ]
     }

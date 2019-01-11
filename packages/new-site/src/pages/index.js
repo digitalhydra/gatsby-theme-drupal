@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from 'gatsby-theme-drupal/src/components/atoms/button';
+import Layout from 'gatsby-theme-drupal/src/components/templates/layout';
 import Index from 'gatsby-theme-drupal/src/components/templates/home';
 
 const Home = () => {
@@ -13,11 +13,9 @@ const Home = () => {
   };
 
   return (
-    <div className="u-push-top--3x">
-      <p> button from theme</p>
-      <Button>Hey</Button>
-      <Index settings={settings} articles={[]} heroCover={{}} />
-    </div>
+    <Layout className="u-push-top--3x">
+      <p>layout</p>
+    </Layout>
   );
 };
 
